@@ -1,0 +1,13 @@
+:root {
+    --body-main-color: #123731;
+}
+
+*,
+ ::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-main-color);
+}
