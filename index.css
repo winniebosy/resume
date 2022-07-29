@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 :root {
-    --body-main-color: #123731;
+    --body-main-color: #111820;
     --main-font-color: #ffffff;
     --main-font-family: 'Source Sans Pro', sans-serif;
     --logo-font: 'Bungee', cursive;
-    --active-border-color: #E3E3E3;
+    --active-border-color: #abe3db;
 }
 
 *,
@@ -35,6 +35,7 @@ header {
     grid-area: header;
     border: 2px solid red;
     margin-top: -0.5rem;
+    height: min-content;
 }
 
 aside {
@@ -138,6 +139,42 @@ a.navbar-brand:focus {
     display: none;
 }
 
+.nav-navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.navbar-nav {
+    margin: 3rem 1rem 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    height: min-content;
+}
+
+.navbar-list {
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    list-style-type: none;
+}
+
+.nav-link {
+    color: var(--main-font-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:focus {
+    outline: 0.3rem solid var(--active-border-color);
+}
+
 
 /* mobile menu btn ends here */
 
@@ -170,5 +207,24 @@ a.navbar-brand:focus {
     .hamburger-menu {
         font-weight: bold;
         font-size: 1.5rem;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        height: fit-content;
+        border: 2px solid red;
+        margin-top: -2rem;
+        margin-left: 1rem;
+    }
+    .nav-navigation {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid yellowgreen;
+    }
+    .nav-link {
+        border: 2px solid red;
     }
 }
