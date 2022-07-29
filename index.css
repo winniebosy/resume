@@ -18,6 +18,20 @@ body {
     font-family: var(--main-font-family);
 }
 
+
+/* page structure using grid */
+
+.container {
+    display: grid;
+    grid-template-areas: 'header header header header' 'aside main main main' 'footer footer footer footer';
+}
+
+
+/* NAVIGATION STARTS HERE */
+
+
+/* skips links start here */
+
 #skip-links a {
     position: absolute;
     left: -10000px;
@@ -39,6 +53,7 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 15px;
     background-color: #0000ff;
+    font-weight: bold;
 }
 
 #skip-links a:focus {
@@ -47,12 +62,20 @@ body {
     height: max-content;
 }
 
-.img-logo img {
-    border: 2px solid red;
-}
+
+/* Skip links ends here */
+
+
+/* Logo starts here */
 
 .logo {
     font-size: 4rem;
     color: #ffffff;
     font-family: var(--logo-font);
 }
+
+
+/* logo ends here */
+
+
+/* NAVIGATION SECTION ENDS HERE */
