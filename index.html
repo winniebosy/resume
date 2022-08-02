@@ -27,7 +27,7 @@
             <!-- navigation -->
             <nav class="nav-navigation" aria-label="Main Navigation">
                 <div class="navbar-container">
-                    <a class="navbar-brand" href="#introduction" aria-label="WB Home">
+                    <a class="navbar-brand" href="#Introduction" aria-label="WB Home">
                         WB 
                     </a>
                     <button id="navbar-toggler" aria-expanded="false" aria-controls="mobile-nav-menu">
@@ -38,7 +38,7 @@
                 <!-- navigation menu -->
                 <ul class="navbar-nav hide" id="mobile-nav-menu" data-state="closed">
                     <li class="navbar-list">
-                        <a class="nav-link" href="#about-section">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="navbar-list">
                         <a class="nav-link" href="#projects">Projects</a>
@@ -49,7 +49,7 @@
                 </ul>
             </nav>
             <!-- hero section starts here -->
-            <section class="hero-section" aria-describedby="introduction">
+            <section class="hero-section" aria-describedby="Introduction">
                 <p class="hero-information" id="Introduction">
                     <span class="hero-title-name"> Hi, I'm Winnie Bosibori.</span>
                     <span class="hero-title-tag">I am an Accessibility Developer.</span>
@@ -58,10 +58,27 @@
         </header>
 
 
+
+        <aside class="social-media-links" aria-label="Social Media links">
+            <!-- aside navigation -->
+            <a href="https://www.linkedin.com/in/winnie-bosibori-b37601141/">
+                <img class="img-1" src="Assests/Images/6214710_linkedin_logo_icon.svg" role="img" alt="linkedIn Profile">
+            </a>
+            <a href="https://github.com/winniebosy">
+                <img class="img-1" src="Assests/Images/8666686_github_icon.svg" role="img" alt="github profile">
+            </a>
+
+            <a href="https://codepen.io/winysummer">
+                <img class="img-1" src="Assests/Images/2701148_code_codepen_css_html_javascript_icon.svg" role="img" alt="codepen profile">
+            </a>
+            <div></div>
+        </aside>
+
+
         <!-- main content -->
 
         <main id="main" aria-labelledby="main-section-heading">
-            <h1 id="main-section-heading">My Developer Portfolio</h1>
+            <h1 id="main-section-heading">My Portfolio</h1>
             <section id="about" class="about-section" aria-describedby="about-section">
                 <div class="profile-img" role="img" aria-label="Winnie wearing striped black and white hoodie"></div>
                 <div class="about-section-info">
@@ -77,7 +94,7 @@
             <section class="skills-info" aria-describedby="skills-tools-section">
                 <h2 id="skills-tools-section">Technologies and Tools</h2>
                 <p>Here are some of the technologies and tools I have worked with: </p>
-                <ul>
+                <ul class="skills-list">
                     <li>Web Accessibility</li>
                     <li>HTML(5)</li>
                     <li>CSS(3)</li>
@@ -89,31 +106,124 @@
                 </ul>
             </section>
             <!-- projects section -->
-            <section>
+            <section id="projects" aria-describedby="projects-section">
+                <h2 id="projects-section">Projects</h2>
+                <!-- project cards -->
+                <ul class="cards">
+                    <li>
+                        <article class="card-one" aria-describedby="card-one-title">
+                            <div class="card-one-img" role="img" alt="A fictional architectural firm website"></div>
+                            <div class="card-body">
+                                <h2 id="card-one-title">Project One Here</h2>
+                                <p class="Project Description" aria-label="project description">
+
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum ut tristique et egestas quis ipsum suspendisse. Etiam erat velit scelerisque in dictum non consectetur. Auctor neque vitae
+                                    tempus quam.
+                                </p>
+                                <div class="project links">
+                                    <span>
+                                <a href ="#">Live Site</a>
+                            </span>
+                                    <span>
+                                <a href ="#">Code Structure</a>
+                            </span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- end of card one -->
+                    </li>
+                    <li>
+                        <article class="card-one" aria-describedby="card-one-title">
+                            <div class="card-one-img" role="img" alt="A fictional architectural firm website"></div>
+                            <div class="card-body">
+                                <h2 id="card-one-title">Project One Two</h2>
+                                <p class="Project Description" aria-label="project description">
+
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum ut tristique et egestas quis ipsum suspendisse. Etiam erat velit scelerisque in dictum non consectetur. Auctor neque vitae
+                                    tempus quam.
+                                </p>
+                                <div class="project links">
+                                    <span>
+                                <a href ="#">Live Site</a>
+                            </span>
+                                    <span>
+                                <a href ="#">Code Structure</a>
+                            </span>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="card-one" aria-describedby="card-one-title">
+                            <div class="card-one-img" role="img" alt="A fictional architectural firm website"></div>
+                            <div class="card-body">
+                                <h2 id="card-one-title">Project Three Here</h2>
+                                <p class="Project Description" aria-label="project description">
+
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum ut tristique et egestas quis ipsum suspendisse. Etiam erat velit scelerisque in dictum non consectetur. Auctor neque vitae
+                                    tempus quam.
+                                </p>
+                                <div class="project links">
+                                    <span>
+                                <a href ="#">Live Site</a>
+                            </span>
+                                    <span>
+                                <a href ="#">Code Structure</a>
+                            </span>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                    <article class="card-one" aria-describedby="card-one-title">
+                        <div class="card-one-img" role="img" alt="A fictional architectural firm website"></div>
+                        <div class="card-body">
+                            <h2 id="card-one-title">Project Four Here</h2>
+                            <p class="Project Description" aria-label="project description">
+
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum ut tristique et egestas quis ipsum suspendisse. Etiam erat velit scelerisque in dictum non consectetur. Auctor neque vitae
+                                tempus quam.
+                            </p>
+                            <div class="project links">
+                                <span>
+                            <a href ="#">Live Site</a>
+                        </span>
+                                <span>
+                            <a href ="#">Code Structure</a>
+                        </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+
+
+
+                </ul>
 
             </section>
 
-
+            <!-- project section ends here  -->
 
 
         </main>
 
-        <aside>
-            <!-- aside navigation -->
-            <h2>ASIDE</h2>
-
-        </aside>
 
 
-        <footer>
+        <footer id="contacts" aria-describedby="contact-section">
             <!-- footer section -->
-            <h2>FOOTER</h2>
+            <h2 id="contact-section">Get in Touch </h2>
+            <a class="footer-link" href="mailto:winniebosy@gmail.com" aria-label="Contact mail">
+                <img class="img-2" role="img" src="Assests/Images/3586360_email_envelope_mail_send_icon.svg" alt="contact email">
+            </a>
 
         </footer>
 
     </div>
     <!-- script file -->
-    <script src="index.js"></script>
+    <script src="index.js "></script>
 </body>
 
 </html>

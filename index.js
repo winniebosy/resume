@@ -19,39 +19,46 @@ toggleBtn.addEventListener('keydown', function(e) {
     }
 });
 
-//trap focus
-const trapFocus = () => {
-    //select all elements needed to be focused
+function detectscreen() {
+    if (screen.width <= 600) {
+        //trap focus
+        const trapFocus = () => {
+            //select all elements needed to be focused
 
-    let focusElements = document.querySelectorAll('button[id*="navbar-toggler"], a[class*="nav-link"]')
-        //console.log(focusElements);
-    let firstFocusElement = focusElements[0];
-    let lastFocusElement = focusElements[focusElements.length - 1];
+            let focusElements = document.querySelectorAll('button[id*="navbar-toggler"], a[class*="nav-link"]')
+                //console.log(focusElements);
+            let firstFocusElement = focusElements[0];
+            let lastFocusElement = focusElements[focusElements.length - 1];
 
-    focusElements.forEach(focusElement => {
-        //listen to the keydown event in each node
-        focusElement.addEventListener('keydown', function(e) {
+            focusElements.forEach(focusElement => {
+                //listen to the keydown event in each node
+                focusElement.addEventListener('keydown', function(e) {
 
-            if (e.shiftKey) /* shift + tab */ {
-                // focuses on last element
-                if (document.activeElement === firstFocusElement) {
-                    lastFocusElement.focus();
-                    e.preventDefault();
+                    if (e.shiftKey) /* shift + tab */ {
+                        // focuses on last element
+                        if (document.activeElement === firstFocusElement) {
+                            lastFocusElement.focus();
+                            e.preventDefault();
 
-                }
-            } else { /* if tab key is selected */
-                if (document.activeElement === lastFocusElement) {
-                    // focuses on last element
-                    firstFocusElement.focus();
-                    e.preventDefault();
+                        }
+                    } else { /* if tab key is selected */
+                        if (document.activeElement === lastFocusElement) {
+                            // focuses on last element
+                            firstFocusElement.focus();
+                            e.preventDefault();
 
 
-                }
+                        }
 
-            }
+                    }
 
-        });
-    });
+                });
+            });
 
+        }
+        trapFocus()
+
+    }
 }
-trapFocus()
+
+detectscreen()
