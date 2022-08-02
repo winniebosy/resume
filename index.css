@@ -206,6 +206,10 @@
                 justify-content: space-between;
             }
             
+            .about-desc {
+                line-height: 2;
+            }
+            
             .profile-img {
                 border: 5px solid var(--active-border-color);
                 border-radius: 50%;
@@ -256,8 +260,9 @@
                 list-style-type: none;
             }
             
-            .skills-list li::marker {
-                content: '⭐';
+            .skills-list li::before {
+                content: '-'
+                /* '⭐'; */
             }
             
             .cards {
@@ -308,7 +313,7 @@
             }
             
             .card-one-imgFour {
-                background-image: url("Assests/Images/personal-portfolio.png");
+                background-image: url("Assests/Images/portfolio.png");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
