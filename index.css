@@ -163,6 +163,12 @@
             .nav-link:focus {
                 outline: 0.3rem solid var(--active-border-color);
             }
+            
+            .nav-link:hover {
+                background-color: #160f1b;
+                color: var(--active-border-color);
+                border-bottom: 1px solid var(--active-border-color);
+            }
             /* mobile menu btn ends here */
             /* NAVIGATION SECTION ENDS HERE */
             /* HERO SECTION STARTS HERE */
@@ -255,39 +261,131 @@
             }
             
             .cards {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-                list-style: none;
-                margin: 0;
-                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 2rem;
+                align-items: stretch;
+                list-style-type: none;
+                margin: 0.5rem auto;
             }
             
-            .cards>* {
-                flex: 0 1 25em;
+            article[class*="card"] {
+                /* border: 1px solid #ccc; */
+                box-shadow: #191c22 2px 2px;
+                padding: 1rem;
+                border-radius: 0.5rem;
             }
             
-            .card-one {
-                margin: 1em;
-                padding: 0.5em;
-                border-radius: 3px;
-                border: 2px #ccc solid;
-                border-radius: .6em;
+            .card-one-imgOne {
+                background-image: url("Assests/Images/Archdigest-screenshot.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                object-fit: cover;
+                max-width: 100%;
+                height: 300px;
             }
             
-            footer a:focus {
+            .card-one-imgTwo {
+                background-image: url("Assests/Images/interactive-rating.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                object-fit: cover;
+                max-width: 100%;
+                height: 300px;
+            }
+            
+            .card-one-imgThree {
+                background-image: url("Assests/Images/e-learning-landing-page.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                object-fit: cover;
+                max-width: 100%;
+                height: 300px;
+            }
+            
+            .card-one-imgFour {
+                background-image: url("Assests/Images/personal-portfolio.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                object-fit: cover;
+                max-width: 100%;
+                height: 300px;
+            }
+            
+            .card-one-imgFive {
+                background-image: url("Assests/Images/podcast\ landing\ page.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                object-fit: cover;
+                max-width: 100%;
+                height: 300px;
+            }
+            
+            footer a:focus,
+            img:focus {
                 outline: 0.3rem solid var(--active-border-color);
+                padding: 0.5rem;
             }
             
-            .footer-link {
-                border: 2px solid red;
+            #contacts {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
             }
+            
+            #contacts h2 {
+                margin: 0 1rem;
+                display: flex;
+                flex-direction: column;
+            }
+            /* project section links */
+            
+            #projects {
+                padding: 1rem 2rem
+            }
+            
+            .card-live-site,
+            .card-code-structure {
+                border: 2px solid #ccc;
+                padding: 0.3em 0.7em;
+                text-decoration: none;
+                color: var(--main-font-color);
+                font-weight: bold;
+                margin: 0.5em;
+                font-size: 00.8rem;
+            }
+            
+            .card-live-site:hover,
+            .card-code-structure:hover {
+                background-color: #160f1b;
+                outline: 4px dashed var(--active-border-color);
+                border: none
+            }
+            
+            .card-live-site:focus,
+            .card-code-structure:focus {
+                outline: 3px solid var(--active-border-color);
+            }
+            
+            .top-arrow a {
+                color: var(--main-font-color);
+                margin-top: 1rem;
+                font-size: 0.9rem;
+                font-weight: bold;
+            }
+            /* project section links ends here  */
             /* media query for mobile phones and small tablets */
             
             @media (max-width: 760px) {
                 .container {
-                    grid-template-areas: 'header' 'main' 'aside' 'footer';
+                    grid-template-areas: 'header' 'aside' 'main' 'footer';
                     grid-template-columns: 100%;
                 }
                 h2 {
@@ -323,7 +421,7 @@
                     margin: -2rem 1rem 1rem auto;
                     width: min-content;
                     padding: 0.5rem;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    box-shadow: #191c22 5px 5px;
                     background-color: #182029;
                 }
                 .hide,
@@ -346,7 +444,6 @@
                 }
                 .hero-information {
                     display: flex;
-                    border: 2px solid red;
                     flex-direction: column;
                     flex-wrap: nowrap;
                     margin-top: 2.5rem;
@@ -361,7 +458,6 @@
                     margin-left: 0;
                 }
                 .about-section {
-                    border: 2px solid gold;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -371,7 +467,7 @@
                 h1 {
                     text-align: center;
                 }
-                .social-media-links {
+                .social-media-links-mobile {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;
@@ -382,5 +478,14 @@
                 }
                 aside div {
                     display: none;
+                }
+                .cards {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+                }
+                .card-one-imgOne {
+                    height: 200px;
                 }
             }

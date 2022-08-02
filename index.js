@@ -4,23 +4,22 @@ let menuList = document.querySelectorAll('.navbar-list')
 
 //user opens and closes the menu button on the basis of state
 toggleBtn.addEventListener('click', function(e) {
-    elem.setAttribute('data-state', elem.getAttribute('data-state') === 'closed' ? 'open' : 'closed');
-    toggleBtn.setAttribute('aria-expanded', toggleBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-
-
-
-})
-
-//close menu when user presses the escape key
-toggleBtn.addEventListener('keydown', function(e) {
-    if (e.key === '27' || e.key === 'Escape') {
         elem.setAttribute('data-state', elem.getAttribute('data-state') === 'closed' ? 'open' : 'closed');
         toggleBtn.setAttribute('aria-expanded', toggleBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-    }
-});
 
-function detectscreen() {
-    if (screen.width <= 600) {
+
+
+    })
+    //detect screen sizes below 760px
+function detectScreen() {
+    if (screen.width <= 760) {
+        //close menu when user presses the escape key
+        toggleBtn.addEventListener('keydown', function(e) {
+            if (e.key === '27' || e.key === 'Escape') {
+                elem.setAttribute('data-state', elem.getAttribute('data-state') === 'closed' ? 'open' : 'closed');
+                toggleBtn.setAttribute('aria-expanded', toggleBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+            }
+        });
         //trap focus
         const trapFocus = () => {
             //select all elements needed to be focused
@@ -46,19 +45,14 @@ function detectscreen() {
                             // focuses on last element
                             firstFocusElement.focus();
                             e.preventDefault();
-
-
                         }
 
                     }
-
                 });
             });
-
         }
         trapFocus()
-
     }
 }
 
-detectscreen()
+detectScreen()
