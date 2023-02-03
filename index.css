@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+ :root {
+    --body-main-color: #111820;
+    --main-font-color: #ffffff;
+    --main-font-family: 'Source Sans Pro', sans-serif;
+    --logo-font: 'Bungee', cursive;
+    --active-border-color: #abe3db;
+    --secondary-font-color: #000000;
+}
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-main-color);
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+    font-size: 110%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(auto, 250px) minmax(250px, 1fr) minmax(auto, 250px);
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas: 'header header header' 'main main main' 'footer footer footer';
+}
+
+header {
+    grid-area: header;
+    margin-top: -0.5rem;
+    height: min-content;
+}
+
+section {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+    line-height: 1.6;
+    background-color: var(--body-main-color);
+    box-shadow: #191c22 5px 5px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+/* NAVIGATION STARTS HERE */
+
+
+/* skips links start here */
+
+#skip-links a {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 3px solid var(--body-main-color);
+    padding: 0.8rem 2.5rem;
+    color: var(--main-font-color);
+    font-size: 1.2rem;
+    background-color: var(--body-main-color);
+}
+
+#skip-links a:focus {
+    position: static;
+    width: auto;
+    height: max-content;
+    outline: 0.3rem solid var(--active-border-color);
+}
+
+
+/* Skip links ends here */
