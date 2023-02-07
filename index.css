@@ -15,6 +15,11 @@
     box-sizing: border-box;
 }
 
+a:focus {
+    border: 2px solid red !important;
+    padding: 1rem !important;
+}
+
 body {
     background-color: var(--body-main-color);
     font-family: var(--main-font-family);
@@ -94,20 +99,17 @@ footer {
 /* navigation starts here */
 
 .nav-navigation {
-    border: 2px solid red;
+    display: grid;
+    grid-template-areas: ;
 }
 
-.navbar-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-around;
-    border: 2px solid green;
-}
+.logo-container {}
 
 .navbar-toggler {
-    flex: 2;
+    display: none;
 }
+
+.navbar-nav {}
 
 
 /* navigation ends here */
