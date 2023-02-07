@@ -20,7 +20,6 @@ function detectScreen() {
         //trap focus
         const trapFocus = () => {
             //select all elements needed to be focused
-
             let focusElements = document.querySelectorAll('button[id*="navbar-toggler"], a[class*="nav-link"]')
                 //console.log(focusElements);
             let firstFocusElement = focusElements[0];
@@ -29,7 +28,6 @@ function detectScreen() {
             focusElements.forEach(focusElement => {
                 //listen to the keydown event in each node
                 focusElement.addEventListener('keydown', function(e) {
-
                     if (e.shiftKey) /* shift + tab */ {
                         // focuses on last element
                         if (document.activeElement === firstFocusElement) {
