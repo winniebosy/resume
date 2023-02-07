@@ -408,23 +408,25 @@ img:focus {
 /* media query for mobile phones and small tablets */
 
 @media (max-width: 760px) {
-    .container {
-        grid-template-areas: 'header' 'nav' 'main' 'footer';
-        grid-template-columns: 100%;
-    }
     h2 {
         text-align: center;
+    }
+    .nav-container-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     #navbar-toggler {
         display: flex;
         flex-direction: column;
-        margin: 2rem 1rem;
+        margin: 0.3rem 0rem 0 0;
         padding: 0.5rem;
         background-color: var(--body-main-color);
         color: var(--active-border-color);
         font-size: 0.5;
         font-weight: bolder;
         border: 3px solid #ABE3DB;
+        justify-self: flex-end;
     }
     #navbar-toggler:focus {
         outline: 0.3rem solid var(--active-border-color);
@@ -442,7 +444,7 @@ img:focus {
         justify-content: center;
         height: fit-content;
         /* border: 2px solid var(--active-border-color); */
-        margin: -2rem 1rem 1rem auto;
+        margin: 1rem 1rem 1rem auto;
         width: min-content;
         padding: 0.5rem;
         box-shadow: #191c22 5px 5px;
