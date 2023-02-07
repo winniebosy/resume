@@ -42,7 +42,6 @@ header {
 
 nav {
     grid-area: nav;
-    border: 2px solid red;
 }
 
 main {
@@ -93,6 +92,22 @@ footer {
 
 
 /* navigation starts here */
+
+.nav-navigation {
+    border: 2px solid red;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-around;
+    border: 2px solid green;
+}
+
+.navbar-toggler {
+    flex: 2;
+}
 
 
 /* navigation ends here */
