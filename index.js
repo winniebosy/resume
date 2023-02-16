@@ -3,14 +3,15 @@ let elem = document.querySelector('.navbar-nav'); //ul menu
 let menuList = document.querySelectorAll('.navbar-list')
 
 //user opens and closes the menu button on the basis of state
-toggleBtn.addEventListener('click', function(e) {
-        elem.setAttribute('data-state', elem.getAttribute('data-state') === 'closed' ? 'open' : 'closed');
-        toggleBtn.setAttribute('aria-expanded', toggleBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-    })
-    //detect screen sizes below 760px
+
+//detect screen sizes below 760px
 function detectScreen() {
     if (screen.width <= 760) {
-        //close menu when user presses the escape key
+        toggleBtn.addEventListener('click', function(e) {
+                elem.setAttribute('data-state', elem.getAttribute('data-state') === 'closed' ? 'open' : 'closed');
+                toggleBtn.setAttribute('aria-expanded', toggleBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+            })
+            //close menu when user presses the escape key
         toggleBtn.addEventListener('keydown', function(e) {
             if (e.key === '27' || e.key === 'Escape') {
                 elem.setAttribute('data-state', elem.getAttribute('data-state') === 'closed' ? 'open' : 'closed');
